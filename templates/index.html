@@ -1,0 +1,14 @@
+<body>
+  <h3>Identify a Car Brand</h3>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".png, .jpg, .jpeg, .gif">
+    <button type="submit">Upload</button>
+  </form>
+
+  <h1>Result from the Car Identifier</h1>
+  {% if result is defined %}
+    <textarea rows="10" cols="50" readonly>{{ result }}</textarea>
+  {% else %}
+    <p>No result available</p>
+  {% endif %}
+</body>

@@ -1,0 +1,31 @@
+
+Basic outline of the program:
+
+Summary:
+
+A person to take a picture of a car, upload that picture to the application, a convolutional neural network classifies the car by brand,
+and the classification is uploaded to ChatGPT via a prompt that tells the user facts about the brand. This was inspired as part of the wave
+of new electric vehicle brands have come on the market. 
+
+
+main.py: runs the program; contains OpenAI and Flask functionality
+
+aws_s3_download: pull the images from an AWS S3 bucket (used during training only)
+
+brand_data: images used during training
+
+car_id_cnn: the model for identifying the car; consists of importing and normalizing the data, building the model,
+            training the model, and predicting on an instance that can be pased to a ChatGPT prompt
+
+template: basic HTML used for Flask
+
+
+
+
+Future Steps:
+
+-find a better dataset and a larger one
+-imporporate design elements that can are more user friendly 
+-refining and training the model further 
+
+
