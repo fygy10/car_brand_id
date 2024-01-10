@@ -39,8 +39,8 @@ def openai_connection(prompt):
             stop=None
         )
 
-        #check on response
-        print('OpenAI Response:', response)
+        # #check on response
+        # print('OpenAI Response:', response)
 
         #indexes first choice
         if response.choices:
@@ -51,14 +51,12 @@ def openai_connection(prompt):
         return None
 
 
+
 #RUNS THE CNN INSTANCE ON THE IMAGE
 def run_model_evaluate(img_data):
     classification_result = run_model.evaluate(img_data)
 
-    openai_prompt = f"Image classification result: {classification_result}"
-    gpt_result = openai_connection(openai_prompt)
-
-    return gpt_result
+    return classification_result
 
 
 
